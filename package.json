@@ -1,0 +1,38 @@
+{
+    "name": "wd__course__4__card__game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "format": "prettier --write ./",
+        "lint.js": "eslint ./*.js",
+        "lint.css": "stylelint ./*.scss",
+        "lint": "npm run lint.js && npm run lint.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Exm03/WD__COURSE__4__CARD__GAME.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Exm03/WD__COURSE__4__CARD__GAME/issues"
+    },
+    "homepage": "https://github.com/Exm03/WD__COURSE__4__CARD__GAME#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "eslint": "^8.44.0",
+        "prettier": "^2.8.8",
+        "stylelint": "^15.10.0",
+        "stylelint-config-standard": "^34.0.0",
+        "stylelint-config-standard-scss": "^10.0.0",
+        "stylelint-prettier": "^3.0.0"
+    },
+    "dependencies": {
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1"
+    }
+}
