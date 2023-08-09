@@ -22,191 +22,6 @@ body {
     background-size: cover;
 }
 
-.difficulty {
-    display: flex;
-    max-width: 1024px;
-    max-height: 774px;
-    padding: 158px 272px 157px;
-    justify-content: center;
-    align-items: center;
-
-    &__box {
-        width: 480px;
-        height: 459px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background: $boxs-color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &_text {
-            color: #004980;
-            text-align: center;
-            font-size: 40px;
-            font-family: StratosSkyeng, sans-serif;
-            line-height: 48px;
-            padding-top: 52px;
-        }
-
-        &_difficulst {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding-top: 48px;
-            gap: 24px;
-        }
-
-        &_difficulst input[type="radio"] {
-            display: none;
-        }
-
-        &_choice {
-            display: flex;
-            width: 97px;
-            height: 98px;
-            flex-direction: column;
-            justify-content: center;
-            flex-shrink: 0;
-            color: $blue-100;
-            text-align: center;
-            font-size: 64px;
-            font-family: StratosSkyeng, sans-serif;
-            line-height: 72px;
-            border-radius: 12px;
-            background: #fff;
-            cursor: pointer;
-        }
-
-        &_choice:hover {
-            opacity: 0.8;
-            box-shadow: black 2px 1px;
-            transition: 0.3s;
-        }
-
-        &_button {
-            display: flex;
-            width: 246px;
-            height: 48px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 67px;
-            flex-shrink: 0;
-            border-radius: 12px;
-            border: 0;
-            background: $salad-60;
-            color: #fff;
-            text-align: center;
-            font-size: 24px;
-            font-family: StratosSkyeng, sans-serif;
-            line-height: 32px;
-            cursor: pointer;
-        }
-
-        &_button:hover {
-            opacity: 0.7;
-            box-shadow: 3px 2px black;
-            transition: 0.3s;
-        }
-
-        &_button:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-
-        &_input:checked ~ label {
-            background-color: #004980;
-            color: #fff;
-        }
-    }
-}
-
-.game {
-    display: block;
-
-    &__header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        &_timer {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &_time {
-            color: #fff;
-            font-family: StratosSkyeng, sans-serif;
-            font-size: 64px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 72px;
-            margin-left: 22px;
-        }
-
-        &_button {
-            display: flex;
-            width: 246px;
-            height: 48px;
-            margin-top: 52px;
-            margin-right: 23px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            border-radius: 12px;
-            border: 0;
-            background: $salad-60;
-            color: #fff;
-            text-align: center;
-            font-size: 24px;
-            font-family: StratosSkyeng, sans-serif;
-            line-height: 32px;
-            cursor: pointer;
-        }
-    }
-
-    &__board {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        margin: 48px 23px;
-        gap: 15px;
-
-        &_card {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='95' height='133' viewBox='0 0 95 133' fill='none'%3e%3crect width='95' height='133' rx='4' fill='white'/%3e%3crect x='6' y='6' width='83' height='121' rx='4' fill='%23C2F5FF'/%3e%3cmask id='mask0_4325_407' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='6' y='6' width='83' height='121'%3e%3crect x='6' y='6' width='83' height='121' rx='4' fill='%23E4FBFF'/%3e%3c/mask%3e%3cg mask='url(%23mask0_4325_407)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M75.8103 59.406C62.6974 43.9948 42.6434 39.52 31.0183 49.4113L51.4643 73.4411C38.4891 61.0743 20.8037 58.1024 10.1704 67.1498L30.6088 91.1706C17.6344 78.8106 -0.0456412 75.8419 -10.6767 84.8874L36.8091 140.697C47.4402 131.651 47.3406 113.724 37.2175 98.9377L57.6562 122.959C68.2895 113.912 68.1877 95.9784 58.058 81.1906L78.5041 105.22C90.1292 95.3291 88.9231 74.8173 75.8103 59.406Z' fill='%23A1EDFF'/%3e%3cmask id='mask1_4325_407' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-11' y='44' width='98' height='97'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M75.8103 59.4061C62.6974 43.9948 42.6434 39.52 31.0183 49.4114L51.4643 73.4411C38.4891 61.0744 20.8037 58.1024 10.1704 67.1499L30.6088 91.1707C17.6344 78.8106 -0.0456412 75.8419 -10.6767 84.8874L36.8091 140.697C47.4402 131.651 47.3406 113.724 37.2175 98.9378L57.6562 122.959C68.2895 113.912 68.1877 95.9785 58.058 81.1907L78.5041 105.221C90.1292 95.3292 88.9231 74.8174 75.8103 59.4061Z' fill='%23271A58'/%3e%3c/mask%3e%3cg mask='url(%23mask1_4325_407)'%3e%3ccircle cx='61.8614' cy='59.6419' r='25.0281' transform='rotate(-60.3933 61.8614 59.6419)' fill='%2375E5FF'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e ");
-            width: 95px;
-            height: 133px;
-        }
-    }
-}
-
-.timer {
-    display: flex;
-    margin-top: 22px;
-    margin-left: 61px;
-    gap: 57px;
-
-    &__min {
-        color: #fff;
-        font-family: StratosSkyeng, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-    }
-
-    &__sek {
-        color: #fff;
-        font-family: StratosSkyeng, sans-serif;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 32px;
-    }
-}
-
 .card-1 {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='95' height='133' viewBox='0 0 95 133' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='95' height='133' rx='4' fill='white'/%3e%3cpath d='M10.32 6L6.288 24H8.712L9.648 19.584H14.592L15.528 24H17.952L13.92 6H10.32ZM10.128 17.376L12.12 7.92L14.112 17.376H10.128Z' fill='black'/%3e%3cpath d='M84.68 126L88.712 108L86.288 108L85.352 112.416L80.408 112.416L79.472 108L77.048 108L81.08 126L84.68 126ZM84.872 114.624L82.88 124.08L80.888 114.624L84.872 114.624Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M47.4946 76.7216C49.3283 78.7749 51.7912 80 53.9419 80C57.6159 80 61.841 77.9312 62.0247 71.7248C61.8538 65.6009 55.1644 60.4538 48.7603 55.5261C48.2805 55.1569 47.8024 54.789 47.3287 54.422C47.3287 54.422 47.3287 54.4221 47.3286 54.4221C47.3286 54.4221 47.3286 54.422 47.3286 54.422C47.0942 54.6036 46.8591 54.7854 46.6238 54.9675C40.0334 60.0656 33.1774 65.3692 33 71.7248C33.1837 77.9312 37.7762 80 41.4502 80C43.6009 80 45.8557 78.7749 47.4946 76.7216Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.4519 29.007C12.5627 29.0908 12.6744 29.1747 12.7864 29.2589C14.3251 30.4148 15.9323 31.6223 15.9734 33.0588C15.9293 34.5147 14.9141 35 14.0314 35C13.5147 35 12.923 34.7127 12.4824 34.2311C12.0887 34.7127 11.547 35 11.0303 35C10.1475 35 9.04414 34.5147 9 33.0588C9.04261 31.5679 10.6899 30.3238 12.2733 29.1279C12.3266 29.0876 12.3799 29.0473 12.4331 29.0071C12.4362 29.0047 12.4393 29.0023 12.4425 28.9999C12.4425 28.9999 12.4425 28.9999 12.4426 28.9999C12.4426 28.9999 12.4426 28.9999 12.4426 28.9999C12.4458 29.0023 12.4489 29.0047 12.4519 29.007Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M82.5214 103.635C82.4107 103.557 82.299 103.478 82.1869 103.399C80.6483 102.312 79.0411 101.176 79 99.8254C79.0441 98.4564 80.0593 98 80.942 98C81.4587 98 82.0504 98.2702 82.4909 98.7231C82.8847 98.2702 83.4264 98 83.9431 98C84.8258 98 85.9293 98.4564 85.9734 99.8254C85.9308 101.227 84.2835 102.397 82.7001 103.522C82.6467 103.56 82.5934 103.598 82.5403 103.635C82.5372 103.638 82.534 103.64 82.5309 103.642C82.5309 103.642 82.5309 103.642 82.5308 103.642C82.5308 103.642 82.5308 103.642 82.5308 103.642C82.5276 103.64 82.5245 103.638 82.5214 103.635Z' fill='black'/%3e%3c/svg%3e ");
     width: 95px;
@@ -421,4 +236,189 @@ body {
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='95' height='133' viewBox='0 0 95 133' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='95' height='133' rx='4' fill='white'/%3e%3cpath d='M9.936 11.664C9.936 9.024 10.992 7.968 12.6 7.968C14.136 7.968 15.072 8.88 15.072 11.088V11.304H17.472V10.896C17.472 7.536 15.36 5.76 12.6 5.76C9.72 5.76 7.536 7.728 7.536 11.472V18.528C7.536 22.272 9.72 24.24 12.6 24.24C15.48 24.24 17.664 22.344 17.664 18.768V18.288C17.664 14.64 15.696 12.816 13.224 12.816C11.88 12.816 10.704 13.344 9.936 14.688V11.664ZM9.936 18.312C9.936 15.96 10.968 15.024 12.6 15.024C14.28 15.024 15.264 15.96 15.264 18.312V18.744C15.264 21.048 14.232 22.032 12.6 22.032C10.968 22.032 9.936 21.072 9.936 18.744V18.312Z' fill='black'/%3e%3cpath d='M85.064 120.336C85.064 122.976 84.008 124.032 82.4 124.032C80.864 124.032 79.928 123.12 79.928 120.912L79.928 120.696L77.528 120.696L77.528 121.104C77.528 124.464 79.64 126.24 82.4 126.24C85.28 126.24 87.464 124.272 87.464 120.528L87.464 113.472C87.464 109.728 85.28 107.76 82.4 107.76C79.52 107.76 77.336 109.656 77.336 113.232L77.336 113.712C77.336 117.36 79.304 119.184 81.776 119.184C83.12 119.184 84.296 118.656 85.064 117.312L85.064 120.336ZM85.064 113.688C85.064 116.04 84.032 116.976 82.4 116.976C80.72 116.976 79.736 116.04 79.736 113.688L79.736 113.256C79.736 110.952 80.768 109.968 82.4 109.968C84.032 109.968 85.064 110.928 85.064 113.256L85.064 113.688Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M48.3189 66.7767C49.4121 65.2172 51.118 61.8801 51.118 59.5052C51.118 56.8565 49.6708 55 47.5657 55C45.1976 55 43.8819 56.8893 43.8819 59.5052C43.8819 61.4076 45.5171 64.8472 46.6115 66.5821C45.0078 65.4322 41.5999 63.6209 39.7757 63.6209C37.336 63.6209 35.574 65.0315 35.574 67.5707C35.574 69.8278 37.3055 71.3795 39.7757 71.3795C42.1019 71.3795 45.4924 69.3165 46.8711 68.1414L43.6141 79.9999C46.7182 78.8205 48.6891 78.7977 51.6541 79.9999L48.1494 68.1312C49.4342 69.2714 52.8464 71.3795 55.2243 71.3795C57.6946 71.3795 59.4261 69.8278 59.4261 67.5707C59.4261 65.0315 57.6641 63.6209 55.2243 63.6209C53.3302 63.6209 49.8022 65.619 48.3189 66.7767Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.059 31.8261C12.3214 31.4516 12.7305 30.6511 12.7305 30.0813C12.7305 29.4456 12.3832 29 11.878 29C11.3096 29 10.9939 29.4534 10.9939 30.0813C10.9939 30.5377 11.386 31.3628 11.6487 31.7793C11.2636 31.5033 10.4461 31.0688 10.0084 31.0688C9.42289 31.0688 9 31.4074 9 32.0168C9 32.5585 9.41556 32.9309 10.0084 32.9309C10.5668 32.9309 11.3808 32.4356 11.7115 32.1536L10.9297 35C11.6747 34.717 12.1478 34.7115 12.8594 35L12.0182 32.1514C12.3266 32.425 13.1455 32.9309 13.7161 32.9309C14.309 32.9309 14.7246 32.5585 14.7246 32.0168C14.7246 31.4074 14.3017 31.0688 13.7161 31.0688C13.2616 31.0688 12.4151 31.5482 12.059 31.8261Z' fill='black'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M83.059 100.174C83.3214 100.548 83.7305 101.349 83.7305 101.919C83.7305 102.554 83.3832 103 82.878 103C82.3096 103 81.9939 102.547 81.9939 101.919C81.9939 101.462 82.386 100.637 82.6487 100.221C82.2636 100.497 81.4461 100.931 81.0084 100.931C80.4229 100.931 80 100.593 80 99.9832C80 99.4415 80.4156 99.0691 81.0084 99.0691C81.5668 99.0691 82.3808 99.5644 82.7115 99.8464L81.9297 97C82.6747 97.283 83.1478 97.2885 83.8594 97L83.0182 99.8486C83.3266 99.575 84.1455 99.0691 84.7161 99.0691C85.309 99.0691 85.7246 99.4415 85.7246 99.9832C85.7246 100.593 85.3017 100.931 84.7161 100.931C84.2616 100.931 83.4151 100.452 83.059 100.174Z' fill='black'/%3e%3c/svg%3e ");
     width: 95px;
     height: 133px;
+}
+
+.difficulty {
+    display: flex;
+    max-width: 1024px;
+    max-height: 774px;
+    padding: 158px 272px 157px;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+        width: 480px;
+        height: 459px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: $boxs-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &_text {
+            color: #004980;
+            text-align: center;
+            font-size: 40px;
+            font-family: StratosSkyeng, sans-serif;
+            line-height: 48px;
+            padding-top: 52px;
+        }
+
+        &_difficulst {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding-top: 48px;
+            gap: 24px;
+        }
+
+        &_difficulst input[type="radio"] {
+            display: none;
+        }
+
+        &_choice {
+            display: flex;
+            width: 97px;
+            height: 98px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            color: $blue-100;
+            text-align: center;
+            font-size: 64px;
+            font-family: StratosSkyeng, sans-serif;
+            line-height: 72px;
+            border-radius: 12px;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        &_choice:hover {
+            opacity: 0.8;
+            box-shadow: black 2px 1px;
+            transition: 0.3s;
+        }
+
+        &_button {
+            display: flex;
+            width: 246px;
+            height: 48px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 67px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            border: 0;
+            background: $salad-60;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            font-family: StratosSkyeng, sans-serif;
+            line-height: 32px;
+            cursor: pointer;
+        }
+
+        &_button:hover {
+            opacity: 0.7;
+            box-shadow: 3px 2px black;
+            transition: 0.3s;
+        }
+
+        &_button:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        &_input:checked ~ label {
+            background-color: #004980;
+            color: #fff;
+        }
+    }
+}
+
+.game {
+    display: block;
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_timer {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &_time {
+            color: #fff;
+            font-family: StratosSkyeng, sans-serif;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 72px;
+            margin-left: 22px;
+        }
+
+        &_button {
+            display: flex;
+            width: 246px;
+            height: 48px;
+            margin-top: 52px;
+            margin-right: 23px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius: 12px;
+            border: 0;
+            background: $salad-60;
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+            font-family: StratosSkyeng, sans-serif;
+            line-height: 32px;
+            cursor: pointer;
+        }
+    }
+
+    &__board {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: 48px 23px;
+        gap: 15px;
+
+        &_card {
+            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='95' height='133' viewBox='0 0 95 133' fill='none'%3e%3crect width='95' height='133' rx='4' fill='white'/%3e%3crect x='6' y='6' width='83' height='121' rx='4' fill='%23C2F5FF'/%3e%3cmask id='mask0_4325_407' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='6' y='6' width='83' height='121'%3e%3crect x='6' y='6' width='83' height='121' rx='4' fill='%23E4FBFF'/%3e%3c/mask%3e%3cg mask='url(%23mask0_4325_407)'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M75.8103 59.406C62.6974 43.9948 42.6434 39.52 31.0183 49.4113L51.4643 73.4411C38.4891 61.0743 20.8037 58.1024 10.1704 67.1498L30.6088 91.1706C17.6344 78.8106 -0.0456412 75.8419 -10.6767 84.8874L36.8091 140.697C47.4402 131.651 47.3406 113.724 37.2175 98.9377L57.6562 122.959C68.2895 113.912 68.1877 95.9784 58.058 81.1906L78.5041 105.22C90.1292 95.3291 88.9231 74.8173 75.8103 59.406Z' fill='%23A1EDFF'/%3e%3cmask id='mask1_4325_407' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='-11' y='44' width='98' height='97'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M75.8103 59.4061C62.6974 43.9948 42.6434 39.52 31.0183 49.4114L51.4643 73.4411C38.4891 61.0744 20.8037 58.1024 10.1704 67.1499L30.6088 91.1707C17.6344 78.8106 -0.0456412 75.8419 -10.6767 84.8874L36.8091 140.697C47.4402 131.651 47.3406 113.724 37.2175 98.9378L57.6562 122.959C68.2895 113.912 68.1877 95.9785 58.058 81.1907L78.5041 105.221C90.1292 95.3292 88.9231 74.8174 75.8103 59.4061Z' fill='%23271A58'/%3e%3c/mask%3e%3cg mask='url(%23mask1_4325_407)'%3e%3ccircle cx='61.8614' cy='59.6419' r='25.0281' transform='rotate(-60.3933 61.8614 59.6419)' fill='%2375E5FF'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e ");
+            width: 95px;
+            height: 133px;
+        }
+    }
+}
+
+.timer {
+    display: flex;
+    margin-top: 22px;
+    margin-left: 61px;
+    gap: 57px;
+
+    &__min {
+        color: #fff;
+        font-family: StratosSkyeng, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    &__sek {
+        color: #fff;
+        font-family: StratosSkyeng, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
 }
