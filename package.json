@@ -8,7 +8,10 @@
         "format": "prettier --write ./",
         "lint.js": "eslint ./*.js",
         "lint.css": "stylelint ./*.scss",
-        "lint": "npm run lint.js && npm run lint.css"
+        "lint": "npm run lint.js && npm run lint.css",
+        "lint:ts": "tsc ––noEmit",
+        "build": "webpack",
+        "start": "webpack-dev-server --open"
     },
     "repository": {
         "type": "git",
@@ -22,14 +25,27 @@
     },
     "homepage": "https://github.com/Exm03/WD__COURSE__4__CARD__GAME#readme",
     "devDependencies": {
+        "@babel/eslint-parser": "^7.22.7",
         "@typescript-eslint/eslint-plugin": "^5.61.0",
         "@typescript-eslint/parser": "^5.61.0",
+        "copy-webpack-plugin": "^11.0.0",
+        "css-loader": "^6.8.1",
+        "css-minimizer-webpack-plugin": "^5.0.1",
         "eslint": "^8.44.0",
+        "html-webpack-plugin": "^5.5.3",
+        "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^2.8.8",
+        "style-loader": "^3.3.3",
         "stylelint": "^15.10.0",
         "stylelint-config-standard": "^34.0.0",
         "stylelint-config-standard-scss": "^10.0.0",
-        "stylelint-prettier": "^3.0.0"
+        "stylelint-prettier": "^3.0.0",
+        "ts-loader": "^9.4.4",
+        "typescript": "^5.1.6",
+        "typescript-eslint-parser": "^22.0.0",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1"
     },
     "dependencies": {
         "eslint-config-prettier": "^8.8.0",
