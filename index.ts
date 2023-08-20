@@ -37,7 +37,7 @@ function listnerChoiseButton() {
 
 export function hideWhatTheCard() {
     const cards = document.querySelectorAll(".card");
-    cards.forEach((card: HTMLElement) => {
+    cards.forEach((card) => {
         card.classList.add("game__board_card");
     });
 }
