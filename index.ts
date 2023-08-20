@@ -6,7 +6,6 @@ import { renderResult } from "./render";
 randerFirstPage();
 
 
-
 const gameCards : string[] = [];
 
 export let difficulty :string = "";

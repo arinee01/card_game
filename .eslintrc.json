@@ -15,12 +15,9 @@
         "eqeqeq": ["error", "always"]
     },
     "parserOptions": {
-        "sourceType": "module",
-        "ecmaVersion": 2020
+        "sourceType": "module"
     },
     "ignorePatterns": [
         "**/*.html"
-      ],
-      "parser": "typescript-eslint-parser",
-"plugins": ["typescript"]
+      ]
 }
