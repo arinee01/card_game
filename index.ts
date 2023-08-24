@@ -3,34 +3,35 @@ import { randerFirstPage, imia } from "./render";
 import "./style.css";
 import { renderResult } from "./render";
 
-const gameCards : string[] = [];
+const gameCards: string[] = [];
 
-export let difficulty :string = "";
+export let difficulty: string = "";
 
-export function checkClickInputs () {
+export function checkClickInputs() {
     let choiceInputs = document.querySelectorAll(".difficulty__box_input");
     for (let choiceInput of choiceInputs) {
         choiceInput.addEventListener("click", function (e: Event) {
             if (!e.target) {
-                return
+                return;
             }
-            (difficulty = (e.target as HTMLInputElement).value), buttonDisabled(difficulty);
+            (difficulty = (e.target as HTMLInputElement).value),
+                buttonDisabled(difficulty);
         });
     }
 }
 
-function buttonDisabled(difficulty: string) {
+export function buttonDisabled(difficulty: string) {
     let choiceButton = document.querySelector(".difficulty__box_button");
     if (difficulty) {
         choiceButton?.removeAttribute("disabled");
-        listnerChoiseButton()
+        listnerChoiseButton();
     }
 }
 
-function listnerChoiseButton() {
+export function listnerChoiseButton() {
     let choiceButton = document.querySelector(".difficulty__box_button");
     choiceButton?.addEventListener("click", function () {
-        let cardsForGame : any[] = cardsForRandom.slice();
+        let cardsForGame: string[] = cardsForRandom.slice();
         imia(cardsForGame);
     });
 }
@@ -54,9 +55,9 @@ export function ListnerClicksInGame() {
     }
 }
 
-function checkGameResult() {
+export function checkGameResult() {
     if (!gameCards) {
-        return
+        return;
     }
     if (!gameCards[1]) {
         return;
@@ -73,13 +74,13 @@ function checkGameResult() {
     }
 }
 
-function removeCards() {
-    gameCards.splice(0, 2)
+export function removeCards() {
+    gameCards.splice(0, 2);
 }
 
 export function checkClick(button: HTMLButtonElement) {
     button.addEventListener("click", function () {
         let cardsForGame = cardsForRandom.slice();
-        randerFirstPage()
+        randerFirstPage();
     });
 }

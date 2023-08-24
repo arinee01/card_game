@@ -44,12 +44,11 @@ module.exports = {
         clean: true,
     },
     plugins: [
-        new MiniCssExtractPlugin(), new HtmlWebpackPlugin(),
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin(),
         // And here!
         new CopyPlugin({
-          patterns: [
-            { from: "static", to: "static" },
-          ],
+            patterns: [{ from: "static", to: "static" }],
         }),
-      ]
+    ],
 };
