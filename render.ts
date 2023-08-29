@@ -157,7 +157,7 @@ export function randerGameBoard(cardsForGame) {
         if (stopGame) {
             clearInterval(countInterval);
         }
-    }, 1000);
+    }, 60000);
 
     const milisecondsInterval = setInterval(() => {
         rerenderTimer();
@@ -169,7 +169,7 @@ export function randerGameBoard(cardsForGame) {
         if (stopGame) {
             clearInterval(milisecondsInterval);
         }
-    }, 10);
+    }, 1000);
 
     const hidCardsTimeout = setTimeout(hideWhatTheCard, 5000);
     const CliksInGameTimeout = setTimeout(ListnerClicksInGame, 5000);
